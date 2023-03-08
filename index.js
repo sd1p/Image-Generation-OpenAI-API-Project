@@ -1,12 +1,16 @@
+const path = require('path');
 const express= require('express');
 const dotenv= require('dotenv').config();
 const port=process.env.PORT|| 3030;
 
 const app=express();
 
-//For BodyParser
+//for BodyParser
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
+
+//for static page.
+app.use(express.static(path.join(__dirname,'public')));
 
 app.use('/openai',require('./routes/openaiRoutes'));
 
