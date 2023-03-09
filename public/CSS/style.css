@@ -109,6 +109,7 @@ form button:hover {
 img {
   display: block;
   margin: auto;
+  margin-bottom: 40px;
 }
 
 .msg {
@@ -117,3 +118,13 @@ img {
   margin-top: 1rem;
 }
 
+
+footer div{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;;
+  background-color: var(--primary-color);
+  height: 20px;
+  margin-top: 5px;
+}
