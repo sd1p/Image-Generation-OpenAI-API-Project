@@ -1,15 +1,19 @@
 
 
 function onSubmit(e)
-{
+{   
     e.preventDefault();
     document.querySelector('.msg').textContent='';
     document.querySelector('#image').src='';
     const prompt = document.querySelector('#prompt').value;
     const size = document.querySelector('#size').value;
-    console.log(prompt,size);
+    if(size!=='trigger')
+{    console.log(prompt,size);
 
-    generateImageRequest(prompt,size)
+    generateImageRequest(prompt,size)}
+    else{
+        alert("Select a size");
+    }
 }
 
 async function generateImageRequest(prompt,size)
